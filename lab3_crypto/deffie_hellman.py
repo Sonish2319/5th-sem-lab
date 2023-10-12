@@ -14,14 +14,16 @@ def mod_exp(a, b, m):
 # Function to perform Diffie-Hellman key exchange
 def diffie_hellman():
     # Publicly agreed upon prime modulus and base
-    p = 23  # Prime modulus
-    g = 5   # Base
+    p = 353  # Prime modulus
+    g = 3   # Base
 
     # Alice's private key (a)
     a = random.randint(2, p - 2)
+   
 
     # Bob's private key (b)
     b = random.randint(2, p - 2)
+    
 
     # Calculate Alice's public key (A = g^a mod p)
     A = mod_exp(g, a, p)
